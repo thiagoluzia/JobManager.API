@@ -1,0 +1,19 @@
+@JobManager.API_HostAddress = https://vwjwpgj93k.us-east-1.awsapprunner.com
+@JobManager.API_HostAddressLocal = https://localhost:7149
+@JobId = 1
+
+GET {{JobManager.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{JobManager.API_HostAddressLocal}}/jobs/{{JobId}}/apply
+Content-Type: application/json
+
+{
+  "id": 0,
+  "jobId": 0,
+  "candidateName": "string",
+  "candidateEmail": "kisabe1808@citdaca.com",
+  "cvUrl": "string"
+}
